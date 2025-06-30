@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student App</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body class="layout">
+    <!-- HEADER -->
+    <header class="header">
+      <div class="header__container">
+        <img
+          src="assets/icons/header__icon--logo.png"
+          alt="Student App Logo"
+          class="header__logo"
+        />
+
+        <div class="header__title-group">
+          <h1 class="header__title">List of student</h1>
+          <h2 class="header__subtitle">Class 04</h2>
+        </div>
+
+        <div class="header__language">
+          <select id="language-select" class="header__language-select">
+            <option value="en">English</option>
+            <option value="vi">Tiếng Việt</option>
+          </select>
+
+          <img
+            src="assets/icons/header__icon--languages.png"
+            alt="Language icon"
+            class="header__language-icon"
+          />
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <section class="student">
+      <div class="student__container">
+        <!-- Colonne gauche -->
+        <div class="student__intro">
+          <img
+            src="assets/icons/student__icon--mascot.png"
+            alt="Mascot"
+            class="student__mascot"
+          />
+
+          <p class="student__description" id="student-description">
+            This challenge 04's goal is to manipulate an array in JavaScript. To
+            do this, you will find a list of students on the right. You can add
+            names to it or remove them. Thanks to the search bar, you can also
+            easily find a name.
+          </p>
+        </div>
+
+        <!-- Colonne droite -->
+        <div class="student__management">
+          <h2 class="student__title">Manage your student list</h2>
+
+          <!-- Ajouter un étudiant -->
+          <div class="student__form">
+            <input
+              type="text"
+              id="student-name"
+              class="student__input"
+              placeholder="Enter student name"
+              maxlength="50"
+              pattern="[A-Za-zÀ-ÿ\s]+"
+              title="Letters only"
+            />
+
+            <button id="add-btn" class="student__btn student__btn--add">
+              Add
+            </button>
+          </div>
+
+          <!-- Recherche -->
+          <div class="student__search">
+            <div class="student__search-wrapper">
+              <img
+                src="assets/icons/student__icon--search.png"
+                alt="Search icon"
+                class="student__search-icon"
+              />
+              <input
+                type="text"
+                id="search-student"
+                class="student__input"
+                placeholder="Search..."
+                maxlength="50"
+                pattern="[A-Za-zÀ-ÿ\s]+"
+                title="Letters only"
+              />
+            </div>
+          </div>
+
+          <button id="download-btn" class="student__btn student__btn--download">
+            Download List
+          </button>
+
+          <!-- List -->
+          <ul id="student-list" class="student__list"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p class="footer__text">
+        © 2025 Student App - Chloé. All rights reserved.
+      </p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="js/student-app.js"></script>
+  </body>
+</html>

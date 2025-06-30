@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form</title>
+  </head>
+  <body>
+    <input id="nameInput" placeholder="Enter a task" />
+    <button id="addBtn">Add</button>
+    <button id="clearBtn">Clear All</button>
+    <ul id="nameList"></ul>
+
+    <script>
+      const input = document.getElementById("nameInput");
+      const list = document.getElementById("nameList");
+      const addBtn = document.getElementById("addBtn");
+      const clearBtn = document.getElementById("clearBtn");
+
+      addBtn.addEventListener("click", () => {
+        if (input.value.trim() !== "") {
+          const li = document.createElement("li");
+          li.textContent = input.value;
+          list.appendChild(li);
+          input.value = "";
+        }
+      });
+
+      clearBtn.addEventListener("click", () => {
+        list.innerHTML = "";
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+@use "variables" as *;
+
+.footer {
+  background-color: $color-blue-light;
+  padding: 16px 0;
+  text-align: center;
+  margin-top: auto;
+
+  &__text {
+    font-size: 14px;
+    color: $color-gray;
+  }
+}
