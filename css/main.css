@@ -108,6 +108,7 @@
 .student__description {
   font-size: 16px;
   color: #333333;
+  text-align: justify;
 }
 .student__management {
   flex: 1;
