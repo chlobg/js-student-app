@@ -34,7 +34,8 @@ function displayStudents(filter = "") {
 }
 
 function isValidName(name) {
-  return /^[[\p{L}\s\-']+]{1,50}$/.test(name);
+  const pattern = /^[\p{L}\s\-']{1,50}$/u;
+  return pattern.test(name);
 }
 
 addBtn.addEventListener("click", () => {
