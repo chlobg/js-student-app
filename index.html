@@ -61,11 +61,11 @@
           <div class="student__form">
             <input
               type="text"
-              id="student-name"
+              id="search-student"
               class="student__input"
               placeholder="Enter student name"
               maxlength="50"
-              pattern="[A-Za-zÀ-ÿ\s]+"
+              pattern="[\p{L}\s\-']+"
               title="Letters only"
             />
 
@@ -85,17 +85,13 @@
                 type="text"
                 id="search-student"
                 class="student__input"
-                placeholder="Search..."
+                placeholder="Search students..."
                 maxlength="50"
-                pattern="[A-Za-zÀ-ÿ\s]+"
+                pattern="[\p{L}\s\-']+"
                 title="Letters only"
               />
             </div>
           </div>
-
-          <button id="download-btn" class="student__btn student__btn--download">
-            Download List
-          </button>
 
           <!-- List -->
           <ul id="student-list" class="student__list"></ul>

@@ -48,4 +48,48 @@
       width: 20px;
     }
   }
+
+  @media (max-width: 1440px) {
+    // Laptop version
+    &__container {
+      padding: 0 8px;
+    }
+
+    &__title {
+      font-size: 28px;
+    }
+
+    &__subtitle {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    // Tablet version
+
+    &__title {
+      font-size: 24px;
+    }
+
+    &__subtitle {
+      font-size: 12px;
+    }
+  }
+
+  @media (max-width: 430px) {
+    // Mobile version
+    &__container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    &__title {
+      font-size: 20px;
+    }
+
+    &__subtitle {
+      font-size: 10px;
+    }
+  }
 }

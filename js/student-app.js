@@ -2,7 +2,6 @@ const inputName = document.getElementById("student-name");
 const addBtn = document.getElementById("add-btn");
 const searchInput = document.getElementById("search-student");
 const studentList = document.getElementById("student-list");
-const { jsPDF } = window.jspdf;
 
 let students = [];
 
@@ -35,7 +34,7 @@ function displayStudents(filter = "") {
 }
 
 function isValidName(name) {
-  return /^[A-Za-zÀ-ÿ\s]{1,50}$/.test(name);
+  return /^[[\p{L}\s\-']+]{1,50}$/.test(name);
 }
 
 addBtn.addEventListener("click", () => {
@@ -64,25 +63,4 @@ const descriptions = {
 languageSelect.addEventListener("change", (e) => {
   const lang = e.target.value;
   studentDescription.textContent = descriptions[lang] || descriptions.en;
-});
-
-const downloadBtn = document.getElementById("download-btn");
-
-downloadBtn.addEventListener("click", async () => {
-  if (students.length === 0) {
-    alert("The list is empty.");
-    return;
-  }
-
-  const doc = new jsPDF();
-
-  doc.setFontSize(18);
-  doc.text("List of student", 20, 20);
-
-  doc.setFontSize(12);
-  students.forEach((name, index) => {
-    doc.text(`${index + 1}. ${name}`, 20, 30 + index * 10);
-  });
-
-  doc.save("List-of-student.pdf");
 });
