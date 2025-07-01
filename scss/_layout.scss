@@ -1,6 +1,6 @@
 @use "variables" as *;
 
-.layout {
+/*.layout {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -8,4 +8,16 @@
 
 .footer {
   margin-top: auto;
+}*/
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+
+main {
+  min-height: 100vh;
 }

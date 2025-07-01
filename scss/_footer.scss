@@ -43,6 +43,9 @@
 
   @media (max-width: 430px) {
     // Mobile version
+    font-size: 12px;
+    padding: 10px;
+
     &__container {
       flex-direction: column;
       align-items: center;
