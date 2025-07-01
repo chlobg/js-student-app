@@ -39,6 +39,44 @@
 .header__language-icon {
   width: 20px;
 }
+@media (max-width: 430px) {
+  .header .header__container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .header .header__title-group {
+    align-items: center;
+    text-align: center;
+  }
+  .header .header__title {
+    font-size: 24px;
+  }
+  .header .header__subtitle {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1024px) {
+  .header .header__container {
+    padding: 0 8px;
+  }
+  .header .header__title {
+    font-size: 20px;
+  }
+  .header .header__subtitle {
+    font-size: 12px;
+  }
+}
+@media (max-width: 1440px) {
+  .header .header__container {
+    padding: 0 4px;
+  }
+  .header .header__title {
+    font-size: 18px;
+  }
+  .header .header__subtitle {
+    font-size: 10px;
+  }
+}
 
 .student {
   background-color: #ffffff;
