@@ -69,6 +69,9 @@
     margin-top: 8px;
     justify-content: center;
   }
+  .header__title-group {
+    text-align: center;
+  }
   .header__title {
     font-size: 20px;
   }
@@ -270,7 +273,7 @@
   .footer {
     font-size: 12px;
     padding: 10px;
-    margin-top: 32px;
+    margin-top: ato;
     width: 100%;
     box-sizing: border-box;
   }
@@ -308,7 +311,8 @@ body {
 }
 
 main {
-  min-height: 100vh;
+  flex: 1;
+  text-align: justify;
 }
 
 /*@use "variables" as *;
