@@ -29,7 +29,6 @@ A lightweight JavaScript application to manage a list of student names. This pro
   - `addEventListener()`  
   - `createElement()`  
   - `appendChild()`  
-  - `removeChild()` *(optional delete feature)*
 
 ---
 
